@@ -19,6 +19,7 @@
     "react-dom": "^19.1.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.6.1",
+    "react-spinners": "^0.17.0",
     "responsive-carousel": "^1.5.8"
   },
   "devDependencies": {
