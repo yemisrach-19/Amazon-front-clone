@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+import { FadeLoader } from "react-spinners";
 
-const Loader = () => {
+function Loader() {
   return (
-    <div>
-      <FadeLoader />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "50vh",
+      }}
+    >
+      <FadeLoader color="#0c0c0c"  />
     </div>
   );
 }
 
-export default Loader
+export default Loader;
