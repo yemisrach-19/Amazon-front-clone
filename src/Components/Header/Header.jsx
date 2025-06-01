@@ -10,6 +10,8 @@ import flag from "../../assets/image/flag.jpg";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [{ basket }, dispatch] = useContext(DataContext);
+  console.log(basket.length);
   return (
     <section>
       <div>
@@ -57,7 +59,7 @@ const Header = () => {
           <Link to="/cart" className="nav-cart">
             <img src={cart} width="20" alt="" />
             <h4>Cart</h4>
-            <span>0</span>
+            <span>{basket.length}</span>
           </Link>
         </nav>
       </div>
