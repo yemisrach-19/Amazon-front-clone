@@ -78,46 +78,46 @@ nav {
   margin-left: 15px;
 }
 .nav-text p {
-    font-size: 10px;
-  }
-  .nav-text h1 {
-    font-size: 14px;
-  }
-  .nav-cart {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 0px 15px;
-  }
-  .nav-cart span {
-    position: absolute;
-    font-weight: bold;
-    top: 0;
-    font-size: 15px;
-    background-color: #1a1a1a;
-    left: 6px;
-    color: greenyellow;
-  }
-  .nav-bottom {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: #232f3e;
-    color: #fff;
-    font-size: 15px;
-    padding: 8px 15px;
-  }
-  .nav-bottom div {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-weight: 500;
-  }
-  nav a:hover {
-    border: 1px solid white;
-    border-radius: 3px;
-  }
-  .nav-search,
+  font-size: 10px;
+}
+.nav-text h1 {
+  font-size: 14px;
+}
+.nav-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0px 15px;
+}
+.nav-cart span {
+  position: absolute;
+  font-weight: bold;
+  top: 0;
+  font-size: 15px;
+  background-color: #1a1a1a;
+  left: 6px;
+  color: greenyellow;
+}
+.nav-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #232f3e;
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 15px;
+}
+.nav-bottom div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 500;
+}
+nav a:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+}
+.nav-search,
 .nav-text:hover {
   border: 1px solid white;
   border-radius: 3px;
@@ -131,19 +131,24 @@ nav {
   border-radius: 3px;
 }
 .nav-bottom p:hover {
-    border: 1px solid white;
-    border-radius: 3px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+@media screen and (max-width: 570px) {
+  .header-container {
+    display: flex;
+    flex-direction: column !important;
+    height: auto;
   }
-  @media screen and (max-width: 570px) {
-    .header-container {
-      display: flex;
-      flex-direction: column !important;
-      height: auto;
-    }
-    .nav-bottom :not(:first-child) {
-        display: none;
-      }
-      .nav-language {
-        display: none;
-      }
-    }
+  .nav-bottom :not(:first-child) {
+    display: none;
+  }
+  .nav-language {
+    display: none;
+  }
+}
+.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}

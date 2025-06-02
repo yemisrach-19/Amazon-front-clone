@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext}from "react";
 import "./Header.css";
 import logo from "../../assets/image/amazon_logo.png";
 import icon from "../../assets/image/icon.png";
@@ -8,12 +8,12 @@ import cart from "../../assets/image/cart2.png";
 import menu from "../../assets/image/menu-icon.png";
 import flag from "../../assets/image/flag.jpg";
 import { Link } from "react-router-dom";
-
+import { DataContext } from "../DataProvider/DataProvider";
 const Header = () => {
   const [{ basket }, dispatch] = useContext(DataContext);
   console.log(basket.length);
   return (
-    <section>
+    <section className="fixed">
       <div>
         <nav>
           <Link to="/">
