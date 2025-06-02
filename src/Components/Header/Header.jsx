@@ -1,4 +1,4 @@
-import React, {useContext}from "react";
+import React from "react";
 import "./Header.css";
 import logo from "../../assets/image/amazon_logo.png";
 import icon from "../../assets/image/icon.png";
@@ -8,9 +8,12 @@ import cart from "../../assets/image/cart2.png";
 import menu from "../../assets/image/menu-icon.png";
 import flag from "../../assets/image/flag.jpg";
 import { Link } from "react-router-dom";
-import { DataContext } from "../DataProvider/DataProvider";
+
 const Header = () => {
   const [{ basket }, dispatch] = useContext(DataContext);
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  });
   console.log(basket.length);
   return (
     <section className="fixed">
@@ -59,7 +62,7 @@ const Header = () => {
           <Link to="/cart" className="nav-cart">
             <img src={cart} width="20" alt="" />
             <h4>Cart</h4>
-            <span>{basket.length}</span>
+            <span>{totalItem}</span>
           </Link>
         </nav>
       </div>
